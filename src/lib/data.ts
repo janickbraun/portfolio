@@ -2,7 +2,7 @@ import { Github, Linkedin, Instagram } from "@/components/icons";
 
 export const siteMetadata = {
   title: "Janick Braun | Portfolio",
-  description: "Senior Frontend-Entwickler & Gründer aus München.",
+  description: "Senior Frontend Developer & Founder from Munich.",
   author: "Janick Braun",
   siteUrl: "https://janickbraun.com", // Placeholder
 };
@@ -10,11 +10,11 @@ export const siteMetadata = {
 export const personalInfo = {
   name: "Janick Braun",
   age: 19,
-  location: "München",
-  role: "Wirtschaftsinformatiker & Gründer",
-  bio: "Hi, ich bin Janick. 19, Wirtschaftsinformatiker & Gründer aus München.",
+  location: "Munich",
+  role: "Business Informatics Student & Founder",
+  bio: "Hi, I'm Janick. 19, Business Informatics student & Founder from Munich.",
   aboutSnippet:
-    "Aktuell im 4. Semester meines Bachelor-Studiums in Wirtschaftsinformatik an der FOM München, absolviere ich parallel ein duales Studium bei der Deutschen Telekom. Zudem bin ich Gründer und Geschäftsführer der Janick Braun UG, wo ich meine Leidenschaft für Software-Entwicklung in reale, nutzerzentrierte Produkte umsetze.",
+    "Currently in the 4th semester of my Bachelor's degree in Business Informatics at FOM Munich, I am concurrently completing a dual study program at Deutsche Telekom. Additionally, I am the founder and CEO of Janick Braun UG, where I translate my passion for software development into real, user-centric products.",
   socials: [
     {
       name: "GitHub",
@@ -53,9 +53,9 @@ export const projects: Project[] = [
   {
     slug: "rapidtyper",
     title: "RapidTyper",
-    description: "Multiplayer & Singleplayer Tippgeschwindigkeits-Test.",
+    description: "Multiplayer & Singleplayer typing speed test.",
     longDescription:
-      "RapidTyper ist eine Plattform, auf der Nutzer ihre Tippgeschwindigkeit testen und verbessern können. Das Projekt umfasst sowohl einen Singleplayer- als auch einen spannenden Multiplayer-Modus, um sich mit Freunden in Echtzeit zu messen. Entwickelt mit Fokus auf Performance und Echtzeit-Synchronisation.",
+      "RapidTyper is a platform where users can test and improve their typing speed. The project includes both a single-player mode and an exciting multiplayer mode to compete with friends in real-time. Developed with a focus on performance and real-time synchronization.",
     url: "https://rapidtyper.com",
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200",
     category: "software",
@@ -65,9 +65,9 @@ export const projects: Project[] = [
   {
     slug: "secondskate",
     title: "secondskate",
-    description: "App für Skateboarder zum gemeinsamen Kauf eines Schuhpaars.",
+    description: "An app for skateboarders to facilitate the joint purchase of a pair of shoes.",
     longDescription:
-      "secondskate löst ein bekanntes Problem in der Skate-Community: Oft geht nur ein Schuh durch Griptape kaputt, während der andere intakt bleibt. Die App führt Skater mit entgegengesetzten kaputten Schuhen zusammen (Goofy und Regular), um neue Paare effizient und nachhaltig zu teilen.",
+      "secondskate solves a well-known problem in the skate community: often only one shoe gets ruined by griptape while the other remains intact. The app brings together skaters with opposite worn-out shoes (Goofy and Regular) to share new pairs efficiently and sustainably.",
     url: "https://secondskate.de",
     image: "https://images.unsplash.com/photo-1564982752979-3f7bc974d29a?auto=format&fit=crop&q=80&w=1200",
     category: "software",
@@ -77,9 +77,9 @@ export const projects: Project[] = [
   {
     slug: "jukevote",
     title: "jukevote",
-    description: "Demokratische Party-Musik-App mit Spotify-Integration.",
+    description: "Democratic party music app with Spotify integration.",
     longDescription:
-      "Mit jukevote wird jeder Gast zum DJ. Der Host erstellt eine Lobby, Gäste treten via QR-Code oder Pin bei und können Songs vorschlagen oder darüber abstimmen. Die Songs mit den meisten Votes landen automatisch direkt in der Spotify-Warteschlange der Party.",
+      "With jukevote, every guest becomes a DJ. The host creates a lobby, guests join via QR code or PIN and can suggest songs or vote on them. The songs with the most votes automatically go directly into the party's Spotify queue.",
     image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=1200",
     category: "software",
     techStack: ["Next.js", "Spotify API", "WebSockets"],
@@ -88,9 +88,9 @@ export const projects: Project[] = [
   {
     slug: "dangerous-digestion",
     title: "Dangerous Digestion",
-    description: "Comic-Stil Jump-and-Run Lernspiel (Biologie 5. Klasse).",
+    description: "Comic-style jump-and-run educational game (5th grade Biology).",
     longDescription:
-      "Ein Edu-Game für 5. Klässler im Comic-Stil. Der Spieler steuert einen kleinen Menschen, der gegessen wurde und den Verdauungstrakt durchqueren muss. Auf dem Weg gibt es interaktive Biologie-Quizzes. Das Projekt macht den Lernstoff der Schule spielerisch erfahrbar.",
+      "An educational game for 5th graders in a comic style. The player controls a small human who has been eaten and must traverse the digestive tract. Along the way, there are interactive biology quizzes. The project makes school learning material experienceable in a playful way.",
     url: "https://dangerous-digestion.vercel.app",
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
     category: "software",
@@ -99,9 +99,9 @@ export const projects: Project[] = [
   // Agency
   {
     title: "Grovider Agency",
-    description: "Webagentur für moderne digitale Lösungen.",
+    description: "Web agency for modern digital solutions.",
     longDescription:
-      "Gemeinsam mit meinem Co-Founder Luis Baumer entwickeln wir als Grovider Agency professionelle Websites und digitale Lösungen für kleine und mittelständische Unternehmen. Fokus auf Conversion-Rate, Design und SEO.",
+      "Together with my co-founder Luis Baumer, we develop professional websites and digital solutions for small and medium-sized enterprises as Grovider Agency. Focus on conversion rate, design, and SEO.",
     url: "https://grovider.de",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     category: "agency",
@@ -109,17 +109,17 @@ export const projects: Project[] = [
   // Non-Software
   {
     title: "Janick's Hairsalon",
-    description: "Über 150 Haarschnitte als Autodidakt durchgeführt.",
+    description: "Conducted over 150 haircuts as a self-taught barber.",
     longDescription:
-      "In einem eigens eingerichteten Raum in meiner alten Schule habe ich als Autodidakt über 150 Mitschülern und Freunden die Haare geschnitten. Handwerkliches Geschick und Auge für Details abseits des Bildschirms.",
+      "In a space specifically set up in my old school, I cut the hair of over 150 fellow students and friends as a self-taught barber. Manual dexterity and an eye for detail away from the screen.",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
     category: "non-software",
   },
   {
     title: "DIY Skatepark",
-    description: "Eigener Skatepark aus Holz, gemeinsam mit meinem Opa gebaut.",
+    description: "Private wooden skatepark, built together with my grandfather.",
     longDescription:
-      "Ein echtes Handwerksprojekt: Rail, Kicker und Ledge komplett selbst geplant und aus Holz gebaut. Eine wertvolle Lektion in Projektplanung, Statik und handwerklicher Umsetzung.",
+      "A real hands-on project: Rail, kicker, and ledge planned and built entirely from wood. A valuable lesson in project planning, structural engineering, and craftsmanship.",
     image: "https://images.unsplash.com/photo-1620302830882-628d0f1b2b3b?auto=format&fit=crop&q=80&w=1200",
     category: "non-software",
   },
@@ -135,63 +135,63 @@ export interface CVItem {
 }
 
 export const cvItems: CVItem[] = [
-  // Berufserfahrung
+  // Professional Experience
   {
     id: "jb-ug",
-    role: "Gründer & Geschäftsführer",
+    role: "Founder & CEO",
     organization: "Janick Braun UG",
-    date: "Heute",
-    description: "Entwicklung eigener Software-Produkte und Plattform-Lösungen.",
+    date: "Present",
+    description: "Development of proprietary software products and platform solutions.",
     type: "experience",
   },
   {
     id: "telekom",
-    role: "Duales Studium",
+    role: "Dual Study Program",
     organization: "Deutsche Telekom",
-    date: "Seit 2022",
-    description: "Praktische Phasen in verschiedenen Tech-Teams des Konzerns. Frontend-Entwicklung und Software-Engineering.",
+    date: "Since 2022",
+    description: "Practical periods in various tech teams within the corporation. Frontend development and software engineering.",
     type: "experience",
   },
   {
     id: "grovider",
     role: "Co-Founder",
     organization: "Grovider Agency",
-    date: "Seit 2021",
-    description: "Konzeption, Design und Entwicklung von Websites für KMUs.",
+    date: "Since 2021",
+    description: "Concept, design, and development of websites for SMEs.",
     type: "experience",
   },
-  // Ausbildung
+  // Education
   {
     id: "fom",
-    role: "Bachelor of Science: Wirtschaftsinformatik",
-    organization: "FOM Hochschule München",
-    date: "Aktuell (4. Semester)",
-    description: "Duales Studium parallel zur Tätigkeit bei der Telekom. Fokus auf Software Engineering, IT-Management und BWL.",
+    role: "Bachelor of Science: Business Informatics",
+    organization: "FOM University Munich",
+    date: "Current (4th Semester)",
+    description: "Dual study parallel to working at Telekom. Focus on Software Engineering, IT Management, and Business Administration.",
     type: "education",
   },
   {
     id: "gym-penzberg",
-    role: "Abitur",
+    role: "Abitur (High School Diploma)",
     organization: "Gymnasium Penzberg",
-    date: "Bis 2022",
-    description: "Allgemeine Hochschulreife.",
+    date: "Until 2022",
+    description: "General higher education entrance qualification.",
     type: "education",
   },
-  // Ehrenamt
+  // Volunteer
   {
     id: "schuelersprecher",
-    role: "Schülersprecher",
+    role: "Student Representative",
     organization: "Gymnasium Penzberg",
-    date: "2 Jahre",
-    description: "Vertretung der Schülerschaft, Organisation von Projekten und Vermittlung zwischen Direktion und Schülern.",
+    date: "2 Years",
+    description: "Representation of the student body, organization of projects, and mediation between the administration and students.",
     type: "volunteer",
   },
   {
     id: "gruene-jugend",
-    role: "Mitglied",
+    role: "Member",
     organization: "Grüne Jugend",
-    date: "Vergangenheit",
-    description: "Politisches und gesellschaftliches Engagement auf lokaler Ebene.",
+    date: "Past",
+    description: "Political and social engagement at the local level.",
     type: "volunteer",
   },
 ];

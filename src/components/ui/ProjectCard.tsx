@@ -21,6 +21,7 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
           src={project.image}
           alt={project.title}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-zinc-950/20 transition-colors group-hover:bg-transparent" />
@@ -30,9 +31,9 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
         <div className="flex items-center justify-between">
           <h3 className="font-semibold text-zinc-100 text-xl">{project.title}</h3>
           {isSoftware && project.slug ? (
-            <ArrowUpRight className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-zinc-100" />
+            <ArrowUpRight className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-primary" />
           ) : isExternal ? (
-            <ArrowUpRight className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-zinc-100" />
+            <ArrowUpRight className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-primary" />
           ) : null}
         </div>
         <p className="text-zinc-400 text-sm line-clamp-2">{project.description}</p>

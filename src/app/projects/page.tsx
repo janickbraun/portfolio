@@ -4,8 +4,8 @@ import { ProjectCard } from "@/components/ui/ProjectCard";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Projekte",
-  description: "Eine Auswahl von Software-Projekten, Agenturarbeiten und vielem mehr.",
+  title: "Projects",
+  description: "A selection of software projects, agency work, and more.",
 };
 
 export default function ProjectsPage() {
@@ -17,11 +17,11 @@ export default function ProjectsPage() {
     <div className="container mx-auto max-w-5xl px-6 py-12 md:py-24">
       <FadeIn>
         <h1 className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl mb-6">
-          Projekte
+          Projects
         </h1>
         <p className="text-lg text-zinc-400 max-w-2xl mb-16">
-          Hier dokumentiere ich meine Arbeit. Von skalierbaren Next.js-Architekturen über 
-          Multiplayer-Spiele bis hin zu Handwerksprojekten mit meinem Opa.
+          A showcase of my work. From scalable Next.js architectures and 
+          multiplayer games to hands-on craftsmanship with my grandfather.
         </p>
       </FadeIn>
 
@@ -29,7 +29,7 @@ export default function ProjectsPage() {
         {/* Software Category */}
         <section>
           <FadeIn delay={0.1}>
-            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">
+            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-primary/20 pb-4">
               Software Engineering
             </h2>
           </FadeIn>
@@ -43,8 +43,8 @@ export default function ProjectsPage() {
         {/* Agency Category */}
         <section>
           <FadeIn delay={0.1}>
-            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">
-              Agentur (Grovider)
+            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-primary/20 pb-4">
+              Agency (Grovider)
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -57,8 +57,8 @@ export default function ProjectsPage() {
         {/* Non-Software / Handwerk */}
         <section>
           <FadeIn delay={0.1}>
-            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">
-              Handwerk & Sonstiges
+            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-primary/20 pb-4">
+              Craft & Miscellaneous
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">

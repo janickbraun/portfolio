@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = projects.find((p) => p.slug === resolvedParams.slug);
   
   if (!project) {
-    return { title: "Projekt nicht gefunden" };
+    return { title: "Project not found" };
   }
   
   return {
@@ -48,7 +48,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           className="inline-flex items-center gap-2 text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors mb-10"
         >
           <ArrowLeft className="h-4 w-4" />
-          Zurück zur Übersicht
+          Back to overview
         </Link>
       </FadeIn>
 
@@ -70,7 +70,7 @@ export default async function ProjectDetailPage({ params }: Props) {
               rel="noopener noreferrer"
               className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-zinc-50 px-6 text-sm font-semibold text-zinc-950 transition-colors hover:bg-zinc-200"
             >
-              Projekt besuchen
+              Visit project
               <ExternalLink className="h-4 w-4" />
             </a>
           )}
@@ -82,6 +82,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           src={project.image}
           alt={project.title}
           fill
+          sizes="(max-width: 896px) 100vw, 896px"
           className="object-cover"
           priority
         />
@@ -89,7 +90,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
       <FadeIn delay={0.4} className="prose prose-invert prose-zinc max-w-none">
         <h2 className="text-2xl font-bold text-zinc-100 mb-6 border-b border-zinc-800 pb-2">
-          Über das Projekt
+          About the project
         </h2>
         <p className="text-zinc-300 leading-relaxed text-lg mb-10">
           {project.longDescription}

@@ -1,40 +1,39 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Impressum",
-  description: "Impressum",
+  title: "Imprint",
+  description: "Legal Notice",
 };
 
 export default function ImpressumPage() {
   return (
     <article className="container mx-auto max-w-3xl px-6 py-24 prose prose-invert prose-zinc">
-      <h1>Impressum</h1>
-      <h2>Angaben gemäß § 5 TMG</h2>
+      <h1>Imprint</h1>
+      <h2>Information according to § 5 TMG</h2>
       <p>
-        Janick Braun (Platzhalter)<br />
+        Janick Braun (Placeholder)<br />
         Musterstraße 1<br />
-        80538 München
+        80538 Munich, Germany
       </p>
 
-      <h2>Kontakt</h2>
+      <h2>Contact</h2>
       <p>
-        Telefon: +49 (0) 123 44 55 66<br />
-        E-Mail: hello@example.com
+        Phone: +49 (0) 123 44 55 66<br />
+        E-mail: hello@example.com
       </p>
 
-      <h2>Umsatzsteuer-ID</h2>
+      <h2>VAT ID</h2>
       <p>
-        Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:<br />
+        VAT identification number according to § 27 a of the Value Added Tax Act:<br />
         DE999999999
       </p>
 
-      <h2>Haftung für Inhalte</h2>
+      <h2>Liability for Content</h2>
       <p>
-        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten 
-        nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als 
-        Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde 
-        Informationen zu überwachen oder nach Umständen zu forschen, die auf eine 
-        rechtswidrige Tätigkeit hinweisen.
+        As a service provider, we are responsible for our own content on these pages in 
+        accordance with general laws pursuant to § 7 para. 1 TMG. According to §§ 8 to 10 TMG, however, 
+        as a service provider we are not obligated to monitor transmitted or stored third-party 
+        information or to investigate circumstances that indicate illegal activity.
       </p>
     </article>
   );

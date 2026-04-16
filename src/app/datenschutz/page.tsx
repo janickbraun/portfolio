@@ -1,28 +1,28 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Datenschutz",
-  description: "Datenschutzerklärung",
+  title: "Privacy Policy",
+  description: "Privacy Policy",
 };
 
 export default function DatenschutzPage() {
   return (
     <article className="container mx-auto max-w-3xl px-6 py-24 prose prose-invert prose-zinc">
-      <h1>Datenschutzerklärung</h1>
-      <h2>1. Datenschutz auf einen Blick</h2>
-      <h3>Allgemeine Hinweise</h3>
+      <h1>Privacy Policy</h1>
+      <h2>1. Privacy at a glance</h2>
+      <h3>General information</h3>
       <p>
-        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen
-        Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit
-        denen Sie persönlich identifiziert werden können.
+        The following information provides a simple overview of what happens with your personal
+        data when you visit this website. Personal data is any data with which you can be
+        personally identified.
       </p>
       
-      <h2>2. Allgemeine Hinweise und Pflichtinformationen</h2>
-      <h3>Datenschutz</h3>
+      <h2>2. General information and mandatory information</h2>
+      <h3>Data protection</h3>
       <p>
-        Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln
-        Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften
-        sowie dieser Datenschutzerklärung.
+        The operators of these pages take the protection of your personal data very seriously. We treat
+        your personal data confidentially and in accordance with the statutory data protection
+        regulations and this privacy policy.
       </p>
     </article>
   );

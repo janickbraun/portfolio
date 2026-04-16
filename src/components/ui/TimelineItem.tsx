@@ -16,12 +16,14 @@ export function TimelineItem({ item, delay = 0 }: TimelineItemProps) {
         <div className="md:col-span-3 relative pb-12">
           {/* Mobile date line indicator */}
           <span className="absolute -left-8 top-1 flex h-6 w-6 items-center justify-center md:hidden">
-            <span className="h-2 w-2 rounded-full bg-zinc-600 ring-4 ring-zinc-950" />
+            <span className="h-2 w-2 rounded-full bg-primary ring-4 ring-zinc-950" />
           </span>
           <span className="absolute -left-[31px] top-7 bottom-0 w-[2px] bg-zinc-800 md:hidden" />
 
           {/* Desktop dot indicator */}
-          <span className="hidden md:flex absolute -left-11 top-1.5 h-3 w-3 items-center justify-center rounded-full bg-zinc-600 ring-4 ring-zinc-950" />
+          <span className="hidden md:flex absolute -left-11 top-1.5 h-3 w-3 items-center justify-center rounded-full bg-primary/20 ring-4 ring-zinc-950">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+          </span>
           <span className="hidden md:block absolute -left-10 top-6 bottom-0 w-[2px] bg-zinc-800" />
 
           {/* Mobile date */}
