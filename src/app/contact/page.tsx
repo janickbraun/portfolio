@@ -23,7 +23,7 @@ export default function ContactPage() {
             
             <div className="relative h-32 w-32 md:h-40 md:w-40 shrink-0 rounded-full overflow-hidden border border-zinc-800 shadow-2xl">
               <Image
-                src="/images/janick.jpg"
+                src="/images/me/profile.jpg"
                 alt="Janick Braun"
                 fill
                 className="object-cover rounded-full"

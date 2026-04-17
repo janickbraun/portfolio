@@ -21,7 +21,7 @@ export function Hero() {
                 Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Janick</span>.
               </h1>
               <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl leading-relaxed">
-                Frontend Developer & Founder based in Munich. I build user-centric digital products and focus on clean, high-performance web experiences.
+                Fullstack Developer & Founder based in Munich. I build digital products and focus on clean, high-performance web and app experiences.
               </p>
               
               <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
@@ -51,7 +51,7 @@ export function Hero() {
               <div className="absolute inset-4 rounded-3xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm -z-10 transition-transform" />
               <div className="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-zinc-800">
                 <Image
-                  src="/images/janick.jpg" // User should place their image here
+                  src="/images/me/profile.jpg" // User should place their image here
                   alt="Janick Braun"
                   fill
                   priority

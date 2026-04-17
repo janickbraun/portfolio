@@ -4,14 +4,14 @@ import { personalInfo } from "@/lib/data";
 export function Footer() {
   return (
     <footer className="border-t border-zinc-800/50 bg-zinc-950 py-12 text-zinc-400">
-      <div className="container mx-auto max-w-5xl px-6 grid grid-cols-1 gap-8 md:grid-cols-3">
+      <div className="container mx-auto max-w-5xl px-6 grid grid-cols-2 gap-y-12 gap-x-8 md:grid-cols-3">
         {/* Brand */}
-        <div className="flex flex-col gap-4">
+        <div className="col-span-2 md:col-span-1 flex flex-col gap-4">
           <Link href="/" className="text-lg font-bold text-zinc-50 group">
             {personalInfo.name}
             <span className="text-primary transition-colors group-hover:text-cyan-300">.</span>
           </Link>
-          <p className="text-sm">
+          <p className="text-sm max-w-xs">
             Business Informatics student & Founder from Munich.
           </p>
         </div>
@@ -49,7 +49,7 @@ export function Footer() {
         <p className="text-xs">
           © {new Date().getFullYear()} Janick Braun UG (haftungsbeschränkt). All rights reserved.
         </p>
-        <div className="flex gap-4">
+        <div className="flex gap-6">
           {personalInfo.socials.map((social) => {
             const Icon = social.icon;
             return (

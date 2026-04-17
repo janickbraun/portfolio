@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   const softwareProjects = projects.filter((p) => p.category === "software");
   const agencyProjects = projects.filter((p) => p.category === "agency");
-  const shortFilmProjects = projects.filter((p) => p.category === "short-film");
+  const craftsmanshipProjects = projects.filter((p) => p.category === "craftsmanship" || p.category === "short-film");
 
   return (
     <div className="container mx-auto max-w-5xl px-6 py-12 md:py-24">
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
         </h1>
         <p className="text-lg text-zinc-400 max-w-2xl mb-16">
           A showcase of my work. From scalable Next.js architectures and 
-          multiplayer games to hands-on craftsmanship with my grandfather.
+          multiplayer games to hands-on craftsmanship.
         </p>
       </FadeIn>
 
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
         <section>
           <FadeIn delay={0.1}>
             <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-700 pb-4">
-              Agency (Grovider)
+              Grovider Agency
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -66,15 +66,15 @@ export default function ProjectsPage() {
           </div>
         </section>
 
-        {/* Short-Film Category */}
+        {/* Creative & Miscellaneous */}
         <section>
           <FadeIn delay={0.1}>
             <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-700 pb-4">
-              Short-Films & Others
+              Creative & Miscellaneous
             </h2>
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {shortFilmProjects.map((project, index) => (
+            {craftsmanshipProjects.map((project, index) => (
               <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} />
             ))}
           </div>

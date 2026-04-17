@@ -2,7 +2,7 @@ import { Github, Linkedin, Instagram, YouTube } from "@/components/icons";
 
 export const siteMetadata = {
   title: "Janick Braun | Portfolio",
-  description: "Senior Frontend Developer & Founder from Munich.",
+  description: "Fullstack Developer & Founder from Munich.",
   author: "Janick Braun",
   siteUrl: "https://janickbraun.com", // Placeholder
 };
@@ -41,7 +41,7 @@ export const personalInfo = {
   ],
 };
 
-export type ProjectCategory = "software" | "agency" | "short-film";
+export type ProjectCategory = "software" | "agency" | "short-film" | "craftsmanship";
 
 export interface Project {
   slug?: string;
@@ -157,7 +157,7 @@ export const projects: Project[] = [
     longDescription:
       "In a space specifically set up in my old school, I cut the hair of over 150 fellow students and friends as a self-taught barber. Manual dexterity and an eye for detail away from the screen.",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
-    category: "short-film",
+    category: "craftsmanship",
   },
   {
     slug: "diy-skatepark",
@@ -166,7 +166,7 @@ export const projects: Project[] = [
     longDescription:
       "A real hands-on project: Rail, kicker, and ledge planned and built entirely from wood. A valuable lesson in project planning, structural engineering, and craftsmanship.",
     image: "https://images.unsplash.com/photo-1620302830882-628d0f1b2b3b?auto=format&fit=crop&q=80&w=1200",
-    category: "short-film",
+    category: "craftsmanship",
   },
 ];
 
@@ -194,7 +194,7 @@ export const cvItems: CVItem[] = [
     role: "Dual Study Program",
     organization: "Deutsche Telekom",
     date: "Since 2022",
-    description: "Practical periods in various tech teams within the corporation. Frontend development and software engineering.",
+    description: "Practical periods in various tech teams within the corporation. Fullstack development and software engineering.",
     type: "experience",
   },
   {

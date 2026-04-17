@@ -95,7 +95,7 @@ export function ProjectSlider({ projects }: ProjectSliderProps) {
       {/* Slider Container */}
       <div 
         ref={sliderRef}
-        className="flex overflow-x-auto overflow-y-hidden gap-6 py-6 hide-scrollbar touch-pan-x" 
+        className="flex overflow-x-auto gap-6 py-6 hide-scrollbar touch-pan-y" 
         style={{ 
           scrollbarWidth: 'none', 
           msOverflowStyle: 'none',

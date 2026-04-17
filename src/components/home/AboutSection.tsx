@@ -25,7 +25,7 @@ export function AboutSection() {
             
             <div className="relative h-20 w-20 sm:h-24 sm:w-24 shrink-0 rounded-full overflow-hidden border border-zinc-800 shadow-xl">
               <Image
-                src="/images/janick.jpg"
+                src="/images/me/profile.jpg"
                 alt="Janick Braun"
                 fill
                 className="object-cover rounded-full"
@@ -71,7 +71,7 @@ export function AboutSection() {
             </div>
 
             {/* Action Button */}
-            <div className="pt-2">
+            <div className="pt-6 flex justify-center">
               <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/10"
