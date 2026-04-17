@@ -14,8 +14,8 @@ export default function ImprintPage() {
               <div className="space-y-2">
                 <p className="text-zinc-50 font-medium">{personalInfo.name}</p>
                 <p>Janick Braun UG (haftungsbeschränkt)</p>
-                <p>Musterstraße 123</p>
-                <p>80331 Munich, Germany</p>
+                <p>Ruhe am Bach 5d</p>
+                <p>82377 Penzberg, Germany</p>
               </div>
             </section>
 
@@ -30,7 +30,7 @@ export default function ImprintPage() {
             <section>
               <h2 className="text-xl font-bold text-zinc-200 mb-4 uppercase tracking-widest text-[13px]">Representative</h2>
               <div className="space-y-2">
-                <p>Represented by: Janick Braun (Managing Director)</p>
+                <p>Represented by: Janick Braun</p>
               </div>
             </section>
 

@@ -1,20 +1,29 @@
 import { Github, Linkedin, Instagram, YouTube } from "@/components/icons";
 
+// Calculate age dynamically based on birthday (19.08.2006)
+const birthDate = new Date(2006, 7, 19);
+const today = new Date();
+let currentAge = today.getFullYear() - birthDate.getFullYear();
+const monthDiff = today.getMonth() - birthDate.getMonth();
+if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+  currentAge--;
+}
+
 export const siteMetadata = {
   title: "Janick Braun | Portfolio",
   description: "Fullstack Developer & Founder from Munich.",
   author: "Janick Braun",
-  siteUrl: "https://janickbraun.com", // Placeholder
+  siteUrl: "https://portfolio.janickbraun.com", // Updated by user
 };
 
 export const personalInfo = {
   name: "Janick Braun",
-  age: 19,
+  age: currentAge,
   location: "Munich",
   role: "Business Informatics Student & Founder",
-  email: "hello@janickbraun.de", // Placeholder
-  phone: "+49 123 4567890", // Placeholder
-  bio: "Hi, I'm Janick. 19, Business Informatics student & Founder from Munich.",
+  email: "janick@grovider.de",
+  phone: "+49 (0) 160 98640952",
+  bio: `Hi, I'm Janick. ${currentAge}, Business Informatics student & Founder from Munich.`,
   aboutSnippet:
     "Currently in the 4th semester of my Bachelor's degree in Business Informatics at FOM Munich, I am concurrently completing a dual study program at Deutsche Telekom. Additionally, I am the founder and CEO of Janick Braun UG, where I translate my passion for software development into real, user-centric products.",
   socials: [
@@ -90,7 +99,7 @@ export const projects: Project[] = [
     url: "https://secondskate.de",
     image: "https://images.unsplash.com/photo-1564982752979-3f7bc974d29a?auto=format&fit=crop&q=80&w=1200",
     category: "software",
-    techStack: ["Flutter", "Firebase", "Node.js"],
+    techStack: ["Flutter", "Supabase", "Node.js"],
     featured: true,
   },
   {
@@ -101,7 +110,7 @@ export const projects: Project[] = [
       "With jukevote, every guest becomes a DJ. The host creates a lobby, guests join via QR code or PIN and can suggest songs or vote on them. The songs with the most votes automatically go directly into the party's Spotify queue.",
     image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=1200",
     category: "software",
-    techStack: ["Next.js", "Spotify API", "WebSockets"],
+    techStack: ["React.js", "Spotify API", "WebSockets"],
     featured: true,
   },
   {
@@ -113,7 +122,7 @@ export const projects: Project[] = [
     url: "https://dangerous-digestion.vercel.app",
     image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=1200",
     category: "software",
-    techStack: ["Phaser", "JavaScript"],
+    techStack: ["Unity", "C#"],
   },
   // Agency
   {
@@ -311,7 +320,6 @@ export const hobbies: Hobby[] = [
     longDescription: "Video editing is where I combine my creative and technical skills. I enjoy the process of assembly, color grading, and sound design to create a compelling story.",
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800",
     category: "Creative",
-    details: ["Premiere Pro", "DaVinci Resolve"],
   },
   {
     slug: "cinema",

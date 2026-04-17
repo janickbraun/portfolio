@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { hobbies } from "@/lib/data";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { ArrowLeft, ExternalLink, Code2, Film, Bike, Waves, Mountain, Target, Waves as SwimIcon } from "lucide-react";
+import { ArrowLeft, ExternalLink, Code2, Film, Bike, Waves, Mountain, Target, Waves as SwimIcon, Clapperboard } from "lucide-react";
+import { Letterboxd } from "@/components/icons";
 
 interface HobbyPageProps {
   params: Promise<{
@@ -22,7 +23,7 @@ const hobbyIcons: Record<string, any> = {
   Hiking: Mountain,
   Programming: Code2,
   "Video Editing": Film,
-  "Cinema / Movies": Film,
+  "Cinema / Movies": Clapperboard,
 };
 
 export async function generateMetadata({ params }: HobbyPageProps): Promise<Metadata> {
@@ -46,6 +47,7 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
   }
 
   const Icon = hobbyIcons[hobby.name] || Target;
+  const isCinema = slug === "cinema";
 
   return (
     <div className="container mx-auto max-w-4xl px-6 py-12 md:py-24">
@@ -106,9 +108,18 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
                 href={hobby.externalLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-semibold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-105"
+                className="inline-flex h-12 items-center justify-center gap-3 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/20"
               >
-                External Link <ExternalLink className="h-4 w-4" />
+                {isCinema ? (
+                  <>
+                    <Letterboxd className="h-5 w-5" />
+                    Follow me on Letterboxd
+                  </>
+                ) : (
+                  <>
+                    Visit Website <ExternalLink className="h-4 w-4" />
+                  </>
+                )}
               </a>
             )}
           </div>

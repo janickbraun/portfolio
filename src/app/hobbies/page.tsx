@@ -93,11 +93,7 @@ export default function HobbiesPage() {
                     </div>
                   )}
 
-                  {hobby.externalLink && (
-                    <span className="flex items-center gap-2 text-xs font-semibold text-zinc-500 ml-auto transition-colors group-hover:text-primary">
-                      <ExternalLink className="h-3 w-3" />
-                    </span>
-                  )}
+
                 </div>
               </div>
             </Link>
