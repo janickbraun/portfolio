@@ -4,7 +4,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary: var(--color-cyan-400);
-  --color-primary-hover: var(--color-cyan-500);
+  --color-primary-hover: var(--color-cyan-300);
 }
 
 @layer base {

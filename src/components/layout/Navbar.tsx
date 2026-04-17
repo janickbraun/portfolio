@@ -26,26 +26,20 @@ export function Navbar() {
           >
             Resume
           </Link>
+          <Link
+            href="/hobbies"
+            className="text-sm font-medium text-zinc-400 transition-colors hover:text-zinc-50"
+          >
+            Hobbies
+          </Link>
         </nav>
         <div className="flex items-center gap-4">
-          <a
-            href={personalInfo.socials.find((s) => s.name === "GitHub")?.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-primary transition-colors"
-            aria-label="GitHub"
+          <Link
+            href="/contact"
+            className="hidden sm:inline-flex h-9 items-center justify-center rounded-full bg-primary px-4 text-xs font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
           >
-            <Github className="h-5 w-5" />
-          </a>
-          <a
-            href={personalInfo.socials.find((s) => s.name === "LinkedIn")?.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-400 hover:text-primary transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" />
-          </a>
+            Contact me
+          </Link>
         </div>
       </div>
     </header>

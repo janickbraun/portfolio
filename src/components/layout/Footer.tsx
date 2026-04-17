@@ -7,13 +7,12 @@ export function Footer() {
       <div className="container mx-auto max-w-5xl px-6 grid grid-cols-1 gap-8 md:grid-cols-3">
         {/* Brand */}
         <div className="flex flex-col gap-4">
-          <Link href="/" className="text-lg font-bold text-zinc-50">
+          <Link href="/" className="text-lg font-bold text-zinc-50 group">
             {personalInfo.name}
+            <span className="text-primary transition-colors group-hover:text-cyan-300">.</span>
           </Link>
           <p className="text-sm">
             Business Informatics student & Founder from Munich.
-            <br />
-            Passion for excellent digital products.
           </p>
         </div>
 
@@ -29,26 +28,26 @@ export function Footer() {
           <Link href="/cv" className="text-sm hover:text-zinc-50 transition-colors">
             Resume
           </Link>
+          <Link href="/hobbies" className="text-sm hover:text-zinc-50 transition-colors">
+            Hobbies
+          </Link>
         </div>
 
         {/* Legal & Socials */}
         <div className="flex flex-col gap-3">
           <h3 className="font-semibold text-zinc-50">Legal</h3>
-          <Link href="/impressum" className="text-sm hover:text-zinc-50 transition-colors">
+          <Link href="/imprint" className="text-sm hover:text-zinc-50 transition-colors">
             Imprint
           </Link>
-          <Link href="/datenschutz" className="text-sm hover:text-zinc-50 transition-colors">
+          <Link href="/privacy-policy" className="text-sm hover:text-zinc-50 transition-colors">
             Privacy Policy
-          </Link>
-          <Link href="/agb" className="text-sm hover:text-zinc-50 transition-colors">
-            Terms & Conditions
           </Link>
         </div>
       </div>
       
       <div className="container mx-auto max-w-5xl px-6 mt-12 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-xs">
-          © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
+          © {new Date().getFullYear()} Janick Braun UG (haftungsbeschränkt). All rights reserved.
         </p>
         <div className="flex gap-4">
           {personalInfo.socials.map((social) => {

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Instagram } from "@/components/icons";
+import { Github, Linkedin, Instagram, YouTube } from "@/components/icons";
 
 export const siteMetadata = {
   title: "Janick Braun | Portfolio",
@@ -12,6 +12,8 @@ export const personalInfo = {
   age: 19,
   location: "Munich",
   role: "Business Informatics Student & Founder",
+  email: "hello@janickbraun.de", // Placeholder
+  phone: "+49 123 4567890", // Placeholder
   bio: "Hi, I'm Janick. 19, Business Informatics student & Founder from Munich.",
   aboutSnippet:
     "Currently in the 4th semester of my Bachelor's degree in Business Informatics at FOM Munich, I am concurrently completing a dual study program at Deutsche Telekom. Additionally, I am the founder and CEO of Janick Braun UG, where I translate my passion for software development into real, user-centric products.",
@@ -31,10 +33,15 @@ export const personalInfo = {
       url: "https://www.instagram.com/janick.brn",
       icon: Instagram,
     },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/@janickbraun",
+      icon: YouTube,
+    },
   ],
 };
 
-export type ProjectCategory = "software" | "agency" | "non-software";
+export type ProjectCategory = "software" | "agency" | "short-film";
 
 export interface Project {
   slug?: string;
@@ -46,6 +53,18 @@ export interface Project {
   category: ProjectCategory;
   techStack?: string[];
   featured?: boolean; // Display on homepage
+  youtubeId?: string; // Add youtubeId for video showcase
+}
+
+export interface Hobby {
+  slug: string;
+  name: string;
+  description: string;
+  longDescription?: string;
+  image: string;
+  category: "Sports" | "Tech" | "Creative";
+  externalLink?: string;
+  details?: string[];
 }
 
 export const projects: Project[] = [
@@ -98,6 +117,7 @@ export const projects: Project[] = [
   },
   // Agency
   {
+    slug: "grovider-agency",
     title: "Grovider Agency",
     description: "Web agency for modern digital solutions.",
     longDescription:
@@ -106,22 +126,47 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
     category: "agency",
   },
+  {
+    slug: "penzberg-maxkron",
+    title: "EC Penzberg & Maxkron",
+    description: "Official website of the Eisstockclub Penzberg & Maxkron.",
+    longDescription:
+      "Design and development of the official website for the Eisstockclub Penzberg & Maxkron, realized through Grovider Agency. The site was built with WordPress to allow the club easy content management.",
+    url: "https://ec-penzberg-maxkron.de",
+    image: "https://images.unsplash.com/photo-1483664852095-d6cc6870702d?auto=format&fit=crop&q=80&w=1200",
+    category: "agency",
+    techStack: ["WordPress", "Grovider Agency"],
+  },
   // Non-Software
   {
+    slug: "kampf-auf-tauris",
+    title: "Kampf auf Tauris",
+    description: "YouTube short film inspired by Goethe's Iphigenie auf Tauris.",
+    longDescription:
+      "A short film project created for German class, adapting Goethe's classic drama 'Iphigenie auf Tauris' into a modern cinematic format.",
+    url: "https://www.youtube.com/watch?v=Q6y3fdxzkKk",
+    image: "https://img.youtube.com/vi/Q6y3fdxzkKk/maxresdefault.jpg",
+    category: "short-film",
+    youtubeId: "Q6y3fdxzkKk",
+    featured: true,
+  },
+  {
+    slug: "janicks-hairsalon",
     title: "Janick's Hairsalon",
     description: "Conducted over 150 haircuts as a self-taught barber.",
     longDescription:
       "In a space specifically set up in my old school, I cut the hair of over 150 fellow students and friends as a self-taught barber. Manual dexterity and an eye for detail away from the screen.",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
-    category: "non-software",
+    category: "short-film",
   },
   {
+    slug: "diy-skatepark",
     title: "DIY Skatepark",
     description: "Private wooden skatepark, built together with my grandfather.",
     longDescription:
       "A real hands-on project: Rail, kicker, and ledge planned and built entirely from wood. A valuable lesson in project planning, structural engineering, and craftsmanship.",
     image: "https://images.unsplash.com/photo-1620302830882-628d0f1b2b3b?auto=format&fit=crop&q=80&w=1200",
-    category: "non-software",
+    category: "short-film",
   },
 ];
 
@@ -193,5 +238,88 @@ export const cvItems: CVItem[] = [
     date: "Past",
     description: "Political and social engagement at the local level.",
     type: "volunteer",
+  },
+];
+
+export const hobbies: Hobby[] = [
+  {
+    slug: "skating",
+    name: "Skating",
+    description: "Cruising and technical tricks on the board.",
+    longDescription: "Skating is more than just a sport for me; it's a way of life. I love the technical challenge of learning new tricks and the freedom of just cruising through the city. It has taught me perseverance and how to look at the urban environment from a different perspective.",
+    image: "https://images.unsplash.com/photo-1547447134-cd3f5c716030?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "surfing",
+    name: "Surfing",
+    description: "Catching waves and enjoying the ocean.",
+    longDescription: "There's nothing quite like the feeling of being in the ocean and catching a wave. Surfing connects me with nature and provides a perfect balance to my digital work life. It requires patience, strength, and a deep respect for the water.",
+    image: "https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "wakeboarding",
+    name: "Wakeboarding",
+    description: "Action on the water with cable or boat.",
+    longDescription: "Wakeboarding is my go-to summer activity. Whether it's at a cable park or behind a boat, I love the adrenaline and the opportunity to push my limits on the water.",
+    image: "https://images.unsplash.com/photo-1533230408708-8f9f91d1235a?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "snowboarding",
+    name: "Snowboarding",
+    description: "Mountain peaks and fresh powder.",
+    longDescription: "Winter belongs to the mountains. Snowboarding allows me to explore the alpine landscape and enjoy the speed and flow of riding down a slope covered in fresh powder.",
+    image: "https://images.unsplash.com/photo-1495554698253-681539e9ea84?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "golfing",
+    name: "Golfing",
+    description: "Precision and focus on the green.",
+    longDescription: "Golf is a game of extreme precision and mental focus. I enjoy the quiet concentration required for every shot and the beauty of the well-maintained greens.",
+    image: "https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "swimming",
+    name: "Swimming",
+    description: "Full body workout and water love.",
+    image: "https://images.unsplash.com/photo-1530549387631-fbb129c1b027?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "hiking",
+    name: "Hiking",
+    description: "Exploring trails and mountain views.",
+    image: "https://images.unsplash.com/photo-1551632432-c7d5194f1473?auto=format&fit=crop&q=80&w=800",
+    category: "Sports",
+  },
+  {
+    slug: "programming",
+    name: "Programming",
+    description: "Creating software and solving logic puzzles.",
+    longDescription: "Programming is both my profession and my passion. I love the process of taking an idea and turning it into a working product through code. It's a continuous journey of learning and problem-solving.",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800",
+    category: "Tech",
+  },
+  {
+    slug: "video-editing",
+    name: "Video Editing",
+    description: "Storytelling through moving pictures.",
+    longDescription: "Video editing is where I combine my creative and technical skills. I enjoy the process of assembly, color grading, and sound design to create a compelling story.",
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&q=80&w=800",
+    category: "Creative",
+    details: ["Premiere Pro", "DaVinci Resolve"],
+  },
+  {
+    slug: "cinema",
+    name: "Cinema / Movies",
+    description: "Passionate about cinematography and storytelling.",
+    longDescription: "I've always been fascinated by the power of movies. I'm deep into cinema history and modern storytelling, always looking for inspiration in cinematography and direction.",
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80&w=800",
+    category: "Creative",
+    externalLink: "https://letterboxd.com/janickbraun",
   },
 ];

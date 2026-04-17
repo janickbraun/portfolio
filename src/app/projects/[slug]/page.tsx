@@ -1,119 +1,165 @@
 import { Metadata } from "next";
-import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "@/lib/data";
+import { notFound } from "next/navigation";
+import { projects, personalInfo } from "@/lib/data";
 import { FadeIn } from "@/components/animations/FadeIn";
+import { Github, YouTube } from "@/components/icons";
 import { ArrowLeft, ExternalLink } from "lucide-react";
+import { YouTubePlayer } from "@/components/ui/YouTubePlayer";
 
-interface Props {
-  params: Promise<{ slug: string }>;
+interface ProjectPageProps {
+  params: {
+    slug: string;
+  };
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const resolvedParams = await params;
-  const project = projects.find((p) => p.slug === resolvedParams.slug);
-  
-  if (!project) {
-    return { title: "Project not found" };
-  }
-  
+export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+  if (!project) return { title: "Project Not Found" };
+
   return {
-    title: project.title,
+    title: `${project.title} | Projects`,
     description: project.description,
   };
 }
 
-export async function generateStaticParams() {
-  return projects
-    .filter((p) => p.category === "software" && p.slug)
-    .map((p) => ({
-      slug: p.slug!,
-    }));
-}
-
-export default async function ProjectDetailPage({ params }: Props) {
-  const resolvedParams = await params;
-  const project = projects.find((p) => p.slug === resolvedParams.slug && p.category === "software");
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
+  const isVideo = !!project.youtubeId;
+
   return (
-    <article className="container mx-auto max-w-4xl px-6 py-12 md:py-24">
-      <FadeIn>
-        <Link
-          href="/projects"
-          className="inline-flex items-center gap-2 text-sm font-medium text-zinc-500 hover:text-zinc-300 transition-colors mb-10"
-        >
-          <ArrowLeft className="h-4 w-4" />
-          Back to overview
-        </Link>
-      </FadeIn>
-
-      <header className="mb-12">
-        <FadeIn delay={0.1}>
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl mb-4">
-            {project.title}
-          </h1>
-          <p className="text-xl text-zinc-400">
-            {project.description}
-          </p>
-        </FadeIn>
-
-        <FadeIn delay={0.2} className="mt-8 flex flex-wrap items-center gap-4">
-          {project.url && (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-10 items-center justify-center gap-2 rounded-full bg-zinc-50 px-6 text-sm font-semibold text-zinc-950 transition-colors hover:bg-zinc-200"
+    <div className="min-h-screen bg-zinc-950 pt-20 pb-20">
+      <div className="container mx-auto px-6 max-w-5xl">
+        {/* Back Button Container */}
+        <div className={isVideo ? "max-w-3xl mx-auto w-full mb-4" : "mb-4"}>
+          <FadeIn delay={0.1}>
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-50 transition-colors"
             >
-              Visit project
-              <ExternalLink className="h-4 w-4" />
-            </a>
-          )}
-        </FadeIn>
-      </header>
+              <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
+              Back to projects
+            </Link>
+          </FadeIn>
+        </div>
 
-      <FadeIn delay={0.3} className="relative aspect-video w-full overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800/50 mb-16">
-        <Image
-          src={project.image}
-          alt={project.title}
-          fill
-          sizes="(max-width: 896px) 100vw, 896px"
-          className="object-cover"
-          priority
-        />
-      </FadeIn>
-
-      <FadeIn delay={0.4} className="prose prose-invert prose-zinc max-w-none">
-        <h2 className="text-2xl font-bold text-zinc-100 mb-6 border-b border-zinc-800 pb-2">
-          About the project
-        </h2>
-        <p className="text-zinc-300 leading-relaxed text-lg mb-10">
-          {project.longDescription}
-        </p>
-
-        {project.techStack && (
-          <>
-            <h2 className="text-2xl font-bold text-zinc-100 mb-6 border-b border-zinc-800 pb-2">
-              Tech Stack
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              {project.techStack.map((tech) => (
-                <span
-                  key={tech}
-                  className="rounded-lg bg-zinc-900 border border-zinc-800 px-4 py-2 text-sm font-medium text-zinc-300"
-                >
-                  {tech}
+        <div className={isVideo ? "flex flex-col gap-12" : "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20"}>
+          {/* Project Content */}
+          <div className={isVideo ? "max-w-3xl mx-auto w-full flex flex-col gap-8" : "flex flex-col gap-8"}>
+            <FadeIn delay={0.2}>
+              <div className="flex flex-col gap-4">
+                <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase rounded-full w-fit">
+                  {project.category}
                 </span>
-              ))}
-            </div>
-          </>
-        )}
-      </FadeIn>
-    </article>
+                <h1 className="text-4xl sm:text-5xl font-bold tracking-tight text-zinc-50">
+                  {project.title}
+                </h1>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={0.3}>
+              <div className="space-y-6">
+                <p className="text-xl text-zinc-300 leading-relaxed">
+                  {project.description}
+                </p>
+                <div className="prose prose-invert prose-zinc max-w-none text-zinc-400">
+                  <p className="leading-relaxed">
+                    {project.longDescription || "Full case study coming soon."}
+                  </p>
+                </div>
+              </div>
+            </FadeIn>
+
+            {project.techStack && (
+              <FadeIn delay={0.4}>
+                <div className="flex flex-col gap-4">
+                  <h2 className="text-sm font-bold text-zinc-500 uppercase tracking-widest">Technologies</h2>
+                  <div className="flex flex-wrap gap-2">
+                    {project.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="rounded-full bg-zinc-900 border border-zinc-800 px-4 py-1.5 text-xs font-medium text-zinc-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </FadeIn>
+            )}
+
+            {/* Video Player (Middle if Video) */}
+            {isVideo && (
+              <FadeIn delay={0.5} className="w-full pt-4">
+                <YouTubePlayer videoId={project.youtubeId!} thumbnail={project.image} />
+              </FadeIn>
+            )}
+
+            <FadeIn delay={isVideo ? 0.6 : 0.5} className="pt-8 text-center lg:text-left">
+              <div className={`flex flex-wrap gap-4 ${isVideo ? 'justify-center' : ''}`}>
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/20"
+                  >
+                    {isVideo ? "Watch on YouTube" : "Visit Live Project"}
+                    <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                )}
+                
+                {isVideo && (
+                   <a
+                    href={personalInfo.socials.find(s => s.name === "YouTube")?.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-900 border border-zinc-800 px-8 text-sm font-bold text-zinc-300 transition-all hover:bg-zinc-800 hover:text-zinc-50"
+                  >
+                    <YouTube className="h-5 w-5" />
+                    My YouTube Channel
+                  </a>
+                )}
+
+                {project.category === "software" && (
+                   <a
+                    href="https://github.com/janickbraun"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-900 border border-zinc-800 px-8 text-sm font-bold text-zinc-300 transition-all hover:bg-zinc-800 hover:text-zinc-50"
+                  >
+                    <Github className="h-5 w-5" />
+                    Source Code
+                  </a>
+                )}
+              </div>
+            </FadeIn>
+          </div>
+
+          {/* Project Media (Standard Side-by-Side if No Video) */}
+          {!isVideo && (
+            <FadeIn delay={0.2} direction="up">
+              <div className="relative aspect-video w-full overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  priority
+                  className="object-cover"
+                />
+              </div>
+            </FadeIn>
+          )}
+        </div>
+      </div>
+    </div>
   );
 }

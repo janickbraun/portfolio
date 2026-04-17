@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { Project } from "@/lib/data";
 import { FadeIn } from "@/components/animations/FadeIn";
-import { ArrowUpRight } from "lucide-react";
 
 interface ProjectCardProps {
   project: Project;
@@ -11,46 +10,41 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
   const isSoftware = project.category === "software";
-  const linkHref = isSoftware && project.slug ? `/projects/${project.slug}` : project.url || "#";
-  const isExternal = !isSoftware && !!project.url;
+  const linkHref = project.slug ? `/projects/${project.slug}` : project.url || "#";
+  const isExternal = false; // Always routing internally first now
 
   return (
-    <FadeIn delay={delay} className="group relative flex flex-col items-start justify-between rounded-2xl border border-zinc-800/50 bg-zinc-900/50 p-6 transition-all hover:bg-zinc-900">
-      <div className="relative h-48 w-full overflow-hidden rounded-xl bg-zinc-800 mb-6">
+    <div className="group relative flex h-full flex-col items-start rounded-2xl border border-zinc-800/50 bg-zinc-900/50 p-5 transition-all hover:bg-zinc-900 shadow-sm overflow-hidden text-left">
+      <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-xl bg-zinc-800 mb-5">
         <Image
           src={project.image}
           alt={project.title}
           fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 768px) 85vw, 360px"
           className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-zinc-950/20 transition-colors group-hover:bg-transparent" />
       </div>
 
-      <div className="flex-1 space-y-3 w-full">
-        <div className="flex items-center justify-between">
-          <h3 className="font-semibold text-zinc-100 text-xl">{project.title}</h3>
-          {isSoftware && project.slug ? (
-            <ArrowUpRight className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-primary" />
-          ) : isExternal ? (
-            <ArrowUpRight className="h-5 w-5 text-zinc-500 transition-colors group-hover:text-primary" />
-          ) : null}
+      <div className="flex flex-col flex-1 gap-3 w-full overflow-hidden">
+        <div className="flex items-start justify-between gap-2">
+          <h3 className="font-semibold text-zinc-100 text-lg leading-tight line-clamp-1">{project.title}</h3>
         </div>
-        <p className="text-zinc-400 text-sm line-clamp-2">{project.description}</p>
+        <p className="text-zinc-400 text-sm leading-relaxed line-clamp-3 overflow-hidden text-ellipsis">{project.description}</p>
+        
+        {project.techStack && (
+          <div className="mt-auto flex flex-wrap gap-2 pt-2">
+            {project.techStack.slice(0, 3).map((tech) => (
+              <span
+                key={tech}
+                className="inline-flex items-center rounded-full bg-zinc-800/50 px-2.5 py-0.5 text-xs font-medium text-zinc-300"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
-
-      {project.techStack && (
-        <div className="mt-6 flex flex-wrap gap-2">
-          {project.techStack.map((tech) => (
-            <span
-              key={tech}
-              className="inline-flex items-center rounded-full bg-zinc-800/50 px-2.5 py-0.5 text-xs font-medium text-zinc-300"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      )}
 
       {linkHref !== "#" && (
         <Link
@@ -62,6 +56,6 @@ export function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
           <span className="sr-only">View {project.title}</span>
         </Link>
       )}
-    </FadeIn>
+    </div>
   );
 }
