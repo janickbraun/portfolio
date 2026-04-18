@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import { personalInfo } from "@/lib/data";
 import { FadeIn } from "@/components/animations/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Imprint",
+  description: "Legal information and contact details.",
+};
 
 export default function ImprintPage() {
   return (

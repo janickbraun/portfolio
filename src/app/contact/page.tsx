@@ -1,10 +1,14 @@
-"use client";
-
+import { Metadata } from "next";
 import { personalInfo } from "@/lib/data";
 import Image from "next/image";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { Mail, Phone, MapPin, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "Let's connect. Reach out for projects, ideas, or just to say hi.",
+};
 
 export default function ContactPage() {
   return (

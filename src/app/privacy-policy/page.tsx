@@ -1,4 +1,10 @@
+import { Metadata } from "next";
 import { FadeIn } from "@/components/animations/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "How I handle your data.",
+};
 
 export default function PrivacyPolicyPage() {
   return (

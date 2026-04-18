@@ -1,6 +1,11 @@
+import { Metadata } from "next";
 import Link from "next/link";
 import { FadeIn } from "@/components/animations/FadeIn";
 import { ArrowLeft } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "404 - Page Not Found",
+};
 
 export default function NotFound() {
   return (

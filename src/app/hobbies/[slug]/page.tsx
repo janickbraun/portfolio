@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: HobbyPageProps): Promise<Meta
   if (!hobby) return { title: "Hobby Not Found" };
 
   return {
-    title: `${hobby.name} | Janick Braun`,
+    title: `${hobby.name} | Hobbies`,
     description: hobby.description,
   };
 }

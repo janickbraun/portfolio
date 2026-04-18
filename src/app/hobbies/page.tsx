@@ -6,7 +6,7 @@ import { FadeIn } from "@/components/animations/FadeIn";
 import { ExternalLink, Code2, Film, Bike, Waves, Mountain, Trophy, Target, Waves as SwimIcon, ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Hobbies | Janick Braun",
+  title: "Hobbies",
   description: "What I do when I'm not coding. Exploring sports, tech, and cinema.",
 };
 
