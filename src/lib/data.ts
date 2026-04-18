@@ -157,6 +157,7 @@ export const projects: Project[] = [
     category: "short-film",
     youtubeId: "Q6y3fdxzkKk",
     featured: true,
+    techStack: ["Film making", "Premiere Pro"],
   },
   {
     slug: "janicks-hairsalon",
@@ -166,6 +167,7 @@ export const projects: Project[] = [
       "In a space specifically set up in my old school, I cut the hair of over 150 fellow students and friends as a self-taught barber. Manual dexterity and an eye for detail away from the screen.",
     image: "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1200",
     category: "craftsmanship",
+    techStack: ["Cutting Hair", "Customer Relationships"],
   },
   {
     slug: "diy-skatepark",
@@ -175,6 +177,7 @@ export const projects: Project[] = [
       "A real hands-on project: Rail, kicker, and ledge planned and built entirely from wood. A valuable lesson in project planning, structural engineering, and craftsmanship.",
     image: "https://images.unsplash.com/photo-1620302830882-628d0f1b2b3b?auto=format&fit=crop&q=80&w=1200",
     category: "craftsmanship",
+    techStack: ["Wood Work", "Project Planning"],
   },
 ];
 

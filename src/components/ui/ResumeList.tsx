@@ -24,10 +24,10 @@ export function ResumeList({
   const linkedinUrl = personalInfo.socials.find(s => s.name === "LinkedIn")?.url;
 
   return (
-    <div className="flex flex-col gap-24">
+    <div className="flex flex-col gap-16">
       {isHeaderVisible && (
          <FadeIn>
-            <div className="flex flex-col gap-4 mb-8 text-center md:text-left">
+            <div className="flex flex-col gap-4 mb-2 text-left">
                <h2 className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl">
                   {title}
                </h2>

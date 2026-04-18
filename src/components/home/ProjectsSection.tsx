@@ -8,13 +8,13 @@ import { ArrowRight } from "lucide-react";
 
 export function ProjectsSection() {
   return (
-    <section id="work" className="py-20 w-full relative">
+    <section id="work" className="pt-0 pb-20 w-full relative">
       <div className="max-w-5xl mx-auto px-6 mb-12">
-        <FadeIn className="flex flex-col items-center md:items-start gap-4">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl text-center md:text-left">
+        <FadeIn className="flex flex-col items-start gap-4">
+          <h2 className="text-3xl font-bold tracking-tight text-zinc-50 sm:text-4xl text-left">
             Selected Projects
           </h2>
-          <p className="text-zinc-400 max-w-2xl text-center md:text-left">
+          <p className="text-zinc-400 max-w-2xl text-left">
             A selection of my recent work in software engineering, agency services, and creative ideas.
           </p>
         </FadeIn>
