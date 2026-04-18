@@ -92,8 +92,6 @@ export default function HobbiesPage() {
                       ))}
                     </div>
                   )}
-
-
                 </div>
               </div>
             </Link>
