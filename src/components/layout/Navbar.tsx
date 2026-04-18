@@ -39,7 +39,13 @@ export function Navbar() {
           <Link
             href="/"
             className="text-lg font-bold tracking-tight text-zinc-50 transition-colors hover:text-primary relative z-50"
-            onClick={() => setIsOpen(false)}
+            onClick={(e) => {
+              setIsOpen(false);
+              if (pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
           >
             {personalInfo.name}
             <span className="text-primary ml-0.5">.</span>

@@ -15,7 +15,7 @@ export function ProjectsSection() {
             Selected Projects
           </h2>
           <p className="text-zinc-400 max-w-2xl text-center md:text-left">
-            A selection of my recent work in software engineering, agency services, and creative storytelling.
+            A selection of my recent work in software engineering, agency services, and creative ideas.
           </p>
         </FadeIn>
       </div>

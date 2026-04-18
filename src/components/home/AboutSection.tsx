@@ -38,12 +38,15 @@ export function AboutSection() {
         <FadeIn delay={0.2}>
           <div className="space-y-8">
             <p className="text-base md:text-lg leading-relaxed text-zinc-400">
-              {personalInfo.aboutSnippet}{" "}
+              Currently in the 4th semester of my Bachelor&apos;s degree in Business Informatics at FOM Munich, 
+              I am concurrently completing a dual study program at Deutsche Telekom. I started programming at the age of 9 and was always trying to make cool projects. 
+              That's why I founded Janick Braun UG to translate my passion for software 
+              development into real app and web products. In my freetime I probably pursue one of my {" "}
               <Link 
                 href="/hobbies" 
                 className="text-zinc-300 underline underline-offset-2 transition-colors hover:text-zinc-50"
               >
-                Explore my hobbies.
+                hobbies.
               </Link>
             </p>
 
