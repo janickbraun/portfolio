@@ -175,7 +175,7 @@ export const projects: Project[] = [
     description: "Private wooden skatepark, built together with my grandfather.",
     longDescription:
       "A real hands-on project: Rail, kicker, and ledge planned and built entirely from wood. A valuable lesson in project planning, structural engineering, and craftsmanship.",
-    image: "https://images.unsplash.com/photo-1620302830882-628d0f1b2b3b?auto=format&fit=crop&q=80&w=1200",
+    image: "https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&q=80&w=1200",
     category: "craftsmanship",
     techStack: ["Wood Work", "Project Planning"],
   },
@@ -313,14 +313,14 @@ export const hobbies: Hobby[] = [
     slug: "swimming",
     name: "Swimming",
     description: "Full body workout and water love.",
-    image: "https://images.unsplash.com/photo-1530549387631-fbb129c1b027?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1519315901367-f34ff9154487?auto=format&fit=crop&q=80&w=1200",
     category: "Sports",
   },
   {
     slug: "hiking",
     name: "Hiking",
     description: "Exploring trails and mountain views.",
-    image: "https://images.unsplash.com/photo-1551632432-c7d5194f1473?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&q=80&w=1200",
     category: "Sports",
   },
   {
