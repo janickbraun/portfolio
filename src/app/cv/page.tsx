@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CVPage() {
   return (
-    <div className="container mx-auto max-w-5xl px-6 py-12 md:py-24">
+    <div className="mx-auto max-w-6xl px-6 py-12 md:py-24">
       <ResumeList 
         title="Resume"
         subtitle="A summary of my roles and involvements across a professional timeline."

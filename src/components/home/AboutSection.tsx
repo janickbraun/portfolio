@@ -9,7 +9,7 @@ import { Sparkles, MapPin, Briefcase, Mail } from "lucide-react";
 export function AboutSection() {
   return (
     <section id="about" className="py-16 bg-zinc-900/10 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Header Row: Text Left, Image Right */}
         <FadeIn delay={0.1}>
           <div className="flex items-center justify-between gap-8 mb-8">

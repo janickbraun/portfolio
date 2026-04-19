@@ -50,7 +50,7 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
   const isCinema = slug === "cinema";
 
   return (
-    <div className="container mx-auto max-w-5xl px-6 py-12 md:py-24">
+    <div className="mx-auto max-w-6xl px-6 py-12 md:py-24">
       <FadeIn>
         <Link
           href="/hobbies"

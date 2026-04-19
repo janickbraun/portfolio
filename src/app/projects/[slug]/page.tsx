@@ -37,7 +37,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
   return (
     <div className="min-h-screen bg-zinc-950 pt-20 pb-20">
-      <div className="container mx-auto px-6 max-w-5xl">
+      <div className="mx-auto px-6 max-w-6xl">
         {/* Back Button Container */}
         <div className={isVideo ? "max-w-3xl mx-auto w-full mb-4" : "mb-4"}>
           <FadeIn delay={0.1}>

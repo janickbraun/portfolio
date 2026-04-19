@@ -99,8 +99,8 @@ export function ProjectSlider({ projects }: ProjectSliderProps) {
   const scrollLeft = () => scrollToCard('left');
   const scrollRight = () => scrollToCard('right');
 
-  // Dynamic padding calculation to align with max-w-5xl container (1024px)
-  const sidePadding = "max(1.5rem, (100vw - 1024px) / 2 + 1.5rem)";
+  // Dynamic padding calculation to align with max-w-6xl container (1152px)
+  const sidePadding = "max(1.5rem, (100vw - 1152px) / 2 + 1.5rem)";
 
   return (
     <div 
@@ -114,7 +114,7 @@ export function ProjectSlider({ projects }: ProjectSliderProps) {
       {/* Navigation Buttons */}
       <button
         onClick={scrollLeft}
-        className="absolute cursor-pointer left-2 md:left-[max(1rem,calc((100vw-1024px)/2-4rem))] top-1/2 -translate-y-1/2 z-20 h-8 w-8 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-zinc-950/80 backdrop-blur-md border border-zinc-800 text-zinc-400 hover:text-primary hover:border-primary transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 shadow-2xl"
+        className="absolute cursor-pointer left-2 md:left-[max(1rem,calc((100vw-1152px)/2-4rem))] top-1/2 -translate-y-1/2 z-20 h-8 w-8 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-zinc-950/80 backdrop-blur-md border border-zinc-800 text-zinc-400 hover:text-primary hover:border-primary transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 shadow-2xl"
         aria-label="Scroll left"
       >
         <ChevronLeft className="h-4 w-4 md:h-6 md:w-6" />
@@ -122,7 +122,7 @@ export function ProjectSlider({ projects }: ProjectSliderProps) {
 
       <button
         onClick={scrollRight}
-        className="absolute cursor-pointer right-2 md:right-[max(1rem,calc((100vw-1024px)/2-4rem))] top-1/2 -translate-y-1/2 z-20 h-8 w-8 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-zinc-950/80 backdrop-blur-md border border-zinc-800 text-zinc-400 hover:text-primary hover:border-primary transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 shadow-2xl"
+        className="absolute cursor-pointer right-2 md:right-[max(1rem,calc((100vw-1152px)/2-4rem))] top-1/2 -translate-y-1/2 z-20 h-8 w-8 md:h-12 md:w-12 flex items-center justify-center rounded-full bg-zinc-950/80 backdrop-blur-md border border-zinc-800 text-zinc-400 hover:text-primary hover:border-primary transition-all opacity-100 md:opacity-0 group-hover/slider:opacity-100 shadow-2xl"
         aria-label="Scroll right"
       >
         <ChevronRight className="h-4 w-4 md:h-6 md:w-6" />
