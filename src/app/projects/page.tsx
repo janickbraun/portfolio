@@ -15,7 +15,7 @@ export default function ProjectsPage() {
   const craftsmanshipProjects = projects.filter((p) => p.category === "craftsmanship" || p.category === "short-film");
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-12 md:py-24">
+    <div className="mx-auto max-w-5xl px-6 py-12 md:py-24">
       <FadeIn>
         <h1 className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-5xl mb-6">
           Projects

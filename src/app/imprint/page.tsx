@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function ImprintPage() {
   return (
     <div className="min-h-screen bg-zinc-950 pt-32 pb-24">
-      <div className="mx-auto px-6 max-w-6xl">
+      <div className="mx-auto max-w-5xl px-6">
         <FadeIn delay={0.1}>
           <h1 className="text-4xl font-bold text-zinc-50 mb-12 tracking-tight">Imprint</h1>
           
