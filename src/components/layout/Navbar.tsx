@@ -47,8 +47,8 @@ export function Navbar() {
               }
             }}
           >
-            {personalInfo.name}
-            <span className="text-primary ml-0.5">.</span>
+              {personalInfo.name}
+              <span className="text-primary ml-0.5">.</span>
           </Link>
 
           {/* Desktop Navigation (Centered) */}

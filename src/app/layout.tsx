@@ -39,6 +39,16 @@ export const metadata: Metadata = {
     description: siteMetadata.description,
     creator: "@janickbraun",
   },
+  icons: {
+    icon: [
+      { url: "/logo/favicon.ico", sizes: "any" },
+      { url: "/logo/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/logo/apple-icon.png" },
+    ],
+  },
+  manifest: "/logo/manifest.json",
   robots: {
     index: true,
     follow: true,
