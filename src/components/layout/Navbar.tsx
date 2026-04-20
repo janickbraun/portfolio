@@ -140,11 +140,6 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               </nav>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 7fee56a29b210430824874515b7b94c044e660d1
             </motion.div>
           )}
 
