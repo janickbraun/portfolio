@@ -141,11 +141,7 @@ export function Navbar() {
                 </motion.div>
               </nav>
 
-              {/* Bottom detail for mobile menu */}
-              <div className="absolute bottom-12 left-8 right-8 flex items-center justify-between text-[10px] text-zinc-600 uppercase tracking-widest font-bold">
-                <span>© 2024 {personalInfo.name}</span>
-                <span>Munich, DE</span>
-              </div>
+
             </motion.div>
           )}
         </AnimatePresence>

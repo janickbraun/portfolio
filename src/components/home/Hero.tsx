@@ -38,7 +38,7 @@ export function Hero() {
                   className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-900 border border-zinc-800 px-5 sm:px-8 text-sm font-bold text-zinc-300 transition-all hover:bg-zinc-800 hover:text-zinc-50 hover:scale-[1.02]"
                 >
                   <FileText className="h-4 w-4" />
-                  My CV
+                  My Resume
                 </Link>
               </div>
             </FadeIn>
