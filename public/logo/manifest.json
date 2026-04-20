@@ -1,0 +1,26 @@
+{
+  "name": "Janick Braun Portfolio",
+  "short_name": "Janick Braun",
+  "description": "Fullstack Developer & Founder from Munich.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#09090b",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/logo/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo/apple-icon.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}

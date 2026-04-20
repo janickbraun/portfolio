@@ -47,8 +47,8 @@ export function Navbar() {
               }
             }}
           >
-            {personalInfo.name}
-            <span className="text-primary ml-0.5">.</span>
+              {personalInfo.name}
+              <span className="text-primary ml-0.5">.</span>
           </Link>
 
           {/* Desktop Navigation (Centered) */}
@@ -140,10 +140,14 @@ export function Navbar() {
                   </Link>
                 </motion.div>
               </nav>
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 7fee56a29b210430824874515b7b94c044e660d1
             </motion.div>
           )}
+
         </AnimatePresence>
       </div>
     </header>

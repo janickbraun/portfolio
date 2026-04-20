@@ -12,12 +12,12 @@ export function Hero() {
       {/* Background Decor */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-5xl h-[400px] bg-primary/5 blur-[100px] rounded-full pointer-events-none -z-10" />
       
-      <div className="max-w-5xl mx-auto px-6 relative z-10 -mt-12 md:-mt-16">
+      <div className="container mx-auto max-w-5xl px-6 relative z-10 -mt-12 md:-mt-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
           {/* Text Content */}
           <div className="flex flex-col items-start text-left flex-1 order-2 md:order-1">
             <FadeIn delay={0.1}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-50 leading-[1.1] mb-6">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-50 leading-[1.1] mb-6 xl:-ml-1">
                 Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Janick</span>.
               </h1>
               <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl leading-relaxed">

@@ -32,13 +32,32 @@ export const metadata: Metadata = {
     title: siteMetadata.title,
     description: siteMetadata.description,
     siteName: siteMetadata.title,
+    images: [
+      {
+        url: "/images/me/profile.jpg",
+        width: 1200,
+        height: 1200,
+        alt: personalInfo.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: siteMetadata.title,
     description: siteMetadata.description,
     creator: "@janickbraun",
+    images: ["/images/me/profile.jpg"],
   },
+  icons: {
+    icon: [
+      { url: "/logo/favicon.ico", sizes: "any" },
+      { url: "/logo/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: [
+      { url: "/logo/apple-icon.png" },
+    ],
+  },
+  manifest: "/logo/manifest.json",
   robots: {
     index: true,
     follow: true,
