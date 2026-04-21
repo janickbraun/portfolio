@@ -110,7 +110,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                     href={project.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/20"
+                    className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
                   >
                     {isVideo ? "Watch on YouTube" : "Visit Live Project"}
                     <ExternalLink className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

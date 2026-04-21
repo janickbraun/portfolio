@@ -133,7 +133,7 @@ export function Navbar() {
                 >
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-2 w-full h-14 rounded-2xl bg-primary text-zinc-950 text-base font-bold shadow-lg shadow-primary/20"
+                    className="flex items-center justify-center gap-2 w-full h-14 rounded-2xl bg-primary text-zinc-950 text-base font-bold"
                   >
                     <Mail className="h-5 w-5" />
                     Contact me

@@ -24,7 +24,7 @@ export function YouTubePlayer({ videoId, thumbnail }: YouTubePlayerProps) {
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
           <button
             onClick={() => setHasConsented(true)}
-            className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-zinc-950 transition-transform hover:scale-110 shadow-xl shadow-primary/20"
+            className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-zinc-950 transition-transform hover:scale-110"
           >
             <Play className="h-8 w-8 fill-current ml-1" />
           </button>

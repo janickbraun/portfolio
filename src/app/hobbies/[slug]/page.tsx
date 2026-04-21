@@ -108,7 +108,7 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
                 href={hobby.externalLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex h-12 items-center justify-center gap-3 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/20"
+                className="inline-flex h-12 items-center justify-center gap-3 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
               >
                 {isCinema ? (
                   <>

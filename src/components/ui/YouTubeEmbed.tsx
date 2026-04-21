@@ -42,7 +42,7 @@ export function YouTubeEmbed({ videoId, title, thumbnail }: YouTubeEmbedProps) {
           onClick={() => setAccepted(true)}
           className="group/btn flex flex-col items-center gap-6 transition-transform hover:scale-105 focus:outline-none"
         >
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-zinc-950 shadow-xl transition-transform group-hover/btn:scale-110">
+          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-zinc-950 transition-transform group-hover/btn:scale-110">
             <Play className="h-6 w-6 ml-1" fill="currentColor" />
           </div>
           <div className="space-y-3 max-w-md">

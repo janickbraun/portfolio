@@ -25,7 +25,7 @@ export function ProjectsSection() {
         
         <Link
           href="/projects"
-          className="group inline-flex h-11 items-center justify-center gap-2 mt-12 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-105 shadow-lg shadow-primary/20"
+          className="group inline-flex h-11 items-center justify-center gap-2 mt-12 rounded-full bg-primary px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-105"
         >
           See all my work
           <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />

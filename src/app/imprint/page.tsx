@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 export default function ImprintPage() {
   return (
-    <div className="min-h-screen bg-zinc-950 pt-32 pb-24">
-      <div className="mx-auto max-w-5xl px-6">
+    <div className="min-h-screen bg-zinc-950">
+      <div className="mx-auto max-w-5xl px-6 py-12 md:py-24">
         <FadeIn delay={0.1}>
           <h1 className="text-4xl font-bold text-zinc-50 mb-12 tracking-tight">Imprint</h1>
           

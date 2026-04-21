@@ -77,7 +77,7 @@ export function AboutSection() {
             <div className="pt-6 flex justify-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/10"
+                className="group inline-flex items-center gap-2 rounded-full bg-primary px-8 py-3.5 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
               >
                 <Mail className="h-4 w-4" />
                 Get in touch

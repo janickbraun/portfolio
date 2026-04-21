@@ -27,7 +27,7 @@ export function Hero() {
               <div className="flex flex-row items-center justify-start gap-3 w-full">
                 <Link
                   href="/projects"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-5 sm:px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02] shadow-lg shadow-primary/20"
+                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-5 sm:px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
                 >
                   See my work
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
