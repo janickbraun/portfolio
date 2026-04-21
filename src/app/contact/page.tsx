@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-zinc-950">
       <div className="mx-auto px-6 max-w-5xl py-12 md:py-24">
-        <FadeIn delay={0.1}>
+        <FadeIn delay={0.1} immediate>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-12 mb-16">
             <div className="max-w-2xl">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-50 mb-6">
@@ -30,7 +30,9 @@ export default function ContactPage() {
                 src="/images/me/profile.jpg"
                 alt="Janick Braun"
                 fill
+                sizes="(max-width: 768px) 128px, 160px"
                 className="object-cover rounded-full"
+                priority
               />
             </div>
           </div>

@@ -8,7 +8,7 @@ import { Sparkles, MapPin, Briefcase, Mail } from "lucide-react";
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-16 bg-zinc-900/10 relative overflow-hidden">
+    <section id="about" className="py-16 relative overflow-hidden">
       <div className="max-w-5xl mx-auto px-6 relative z-10">
         {/* Header Row: Text Left, Image Right */}
         <FadeIn delay={0.1}>
@@ -28,6 +28,7 @@ export function AboutSection() {
                 src="/images/me/profile.jpg"
                 alt="Janick Braun"
                 fill
+                sizes="(max-width: 768px) 80px, 96px"
                 className="object-cover rounded-full"
               />
             </div>

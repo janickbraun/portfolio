@@ -19,6 +19,7 @@ export function YouTubePlayer({ videoId, thumbnail }: YouTubePlayerProps) {
           src={thumbnail}
           alt="Video Thumbnail"
           fill
+          sizes="(max-width: 1024px) 100vw, 768px"
           className="object-cover opacity-60 transition-opacity group-hover:opacity-40"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">

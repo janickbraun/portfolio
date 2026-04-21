@@ -35,6 +35,7 @@ export function YouTubeEmbed({ videoId, title, thumbnail }: YouTubeEmbedProps) {
         src={thumbnail || defaultThumbnail}
         alt={title || "Video thumbnail"}
         fill
+        sizes="(max-width: 1024px) 100vw, 768px"
         className="object-cover transition-transform duration-700 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-zinc-950/60 transition-colors group-hover:bg-zinc-950/70 flex flex-col items-center justify-center p-6 text-center">

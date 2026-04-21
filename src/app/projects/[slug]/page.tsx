@@ -40,7 +40,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       <div className="mx-auto px-6 max-w-5xl">
         {/* Back Button Container */}
         <div className={isVideo ? "max-w-3xl mx-auto w-full mb-4" : "mb-4"}>
-          <FadeIn delay={0.1}>
+          <FadeIn immediate>
             <Link
               href="/projects"
               className="group inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-50 transition-colors"
@@ -54,7 +54,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         <div className={isVideo ? "flex flex-col gap-12" : "grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20"}>
           {/* Project Content */}
           <div className={isVideo ? "max-w-3xl mx-auto w-full flex flex-col gap-8" : "flex flex-col gap-8"}>
-            <FadeIn delay={0.2}>
+            <FadeIn immediate delay={0.2}>
               <div className="flex flex-col gap-4">
                 <span className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase rounded-full w-fit">
                   {project.category}
@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </FadeIn>
 
-            <FadeIn delay={0.3}>
+            <FadeIn immediate delay={0.3}>
               <div className="space-y-6">
                 <p className="text-xl text-zinc-300 leading-relaxed">
                   {project.description}
@@ -146,12 +146,13 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
           {/* Project Media (Standard Side-by-Side if No Video) */}
           {!isVideo && (
-            <FadeIn delay={0.2} direction="up">
+            <FadeIn delay={0.2} direction="up" immediate>
               <div className="relative aspect-video w-full overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                   className="object-cover"
                 />

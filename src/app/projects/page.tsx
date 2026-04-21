@@ -47,7 +47,7 @@ export default function ProjectsPage() {
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {softwareProjects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} />
+              <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} immediate={index < 3} />
             ))}
           </div>
         </section>
@@ -61,7 +61,7 @@ export default function ProjectsPage() {
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {agencyProjects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} />
+              <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} immediate={index < 3} />
             ))}
           </div>
         </section>
@@ -75,7 +75,7 @@ export default function ProjectsPage() {
           </FadeIn>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {craftsmanshipProjects.map((project, index) => (
-              <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} />
+              <ProjectCard key={project.title} project={project} delay={0.2 + index * 0.1} immediate={index < 3} />
             ))}
           </div>
         </section>

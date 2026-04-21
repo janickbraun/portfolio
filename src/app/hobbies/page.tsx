@@ -42,6 +42,7 @@ export default function HobbiesPage() {
           <FadeIn
             key={hobby.name}
             delay={0.1 + index * 0.05}
+            immediate={index < 3}
             className="group relative"
           >
             <Link 
@@ -53,6 +54,9 @@ export default function HobbiesPage() {
                   src={hobby.image}
                   alt={hobby.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  priority={index === 0}
+                  loading={index === 0 ? "eager" : "lazy"}
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent" />

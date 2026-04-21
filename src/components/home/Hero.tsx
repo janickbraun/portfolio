@@ -16,7 +16,7 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
           {/* Text Content */}
           <div className="flex flex-col items-start text-left flex-1 order-2 md:order-1">
-            <FadeIn delay={0.1}>
+            <FadeIn delay={0.1} immediate>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-50 leading-[1.1] mb-6 xl:-ml-1">
                 Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Janick</span>.
               </h1>
@@ -45,7 +45,7 @@ export function Hero() {
           </div>
           
           {/* Profile Image */}
-          <FadeIn delay={0.2} direction="up" className="relative flex-shrink-0 order-1 md:order-2">
+          <FadeIn delay={0.2} direction="up" immediate className="relative flex-shrink-0 order-1 md:order-2">
             <div className="relative h-[240px] w-[240px] sm:h-[280px] sm:w-[280px] md:h-[320px] md:w-[320px] lg:h-[350px] lg:w-[350px]">
               {/* Image Frame */}
               <div className="absolute inset-4 rounded-3xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm -z-10 transition-transform" />
@@ -54,7 +54,9 @@ export function Hero() {
                   src="/images/me/profile.jpg" // User should place their image here
                   alt="Janick Braun"
                   fill
+                  sizes="(max-width: 768px) 240px, (max-width: 1024px) 320px, 350px"
                   priority
+                  loading="eager"
                   className="object-cover transition-transform duration-700 hover:scale-105"
                 />
               </div>

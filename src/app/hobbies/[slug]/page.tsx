@@ -51,7 +51,7 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-12 md:py-24">
-      <FadeIn>
+      <FadeIn immediate>
         <Link
           href="/hobbies"
           className="group inline-flex items-center gap-2 text-sm font-medium text-zinc-400 hover:text-zinc-50 transition-colors mb-8"
@@ -62,7 +62,7 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
       </FadeIn>
 
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-        <FadeIn direction="left" delay={0.1}>
+        <FadeIn direction="left" delay={0.1} immediate>
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
               <div className="p-3 rounded-2xl bg-primary/10 text-primary">
@@ -125,12 +125,13 @@ export default async function HobbyPage({ params }: HobbyPageProps) {
           </div>
         </FadeIn>
 
-        <FadeIn direction="right" delay={0.2}>
+        <FadeIn direction="right" delay={0.2} immediate>
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 shadow-2xl">
             <Image
               src={hobby.image}
               alt={hobby.name}
               fill
+              sizes="(max-width: 1024px) 100vw, 50vw"
               className="object-cover"
               priority
             />
