@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { personalInfo } from "@/lib/data";
 import { FadeIn } from "@/components/animations/FadeIn";
 
 export const metadata: Metadata = {
@@ -29,11 +30,11 @@ export default function PrivacyPolicyPage() {
                 The responsible party for data processing on this website is:
               </p>
               <div className="text-zinc-300 not-italic space-y-1">
-                <p className="font-bold">Janick Braun</p>
+                <p className="font-bold">{personalInfo.name}</p>
                 <p>Ruhe am Bach 5d</p>
                 <p>82377 Penzberg, Germany</p>
-                <p>Phone: +49 (0) 160 98640952</p>
-                <p>Email: janick@secondskate.de</p>
+                <p>Phone: {personalInfo.phone}</p>
+                <p>Email: {personalInfo.email}</p>
               </div>
               
               <h3 className="font-bold text-zinc-100 mt-8 mb-2">How do we record your data?</h3>

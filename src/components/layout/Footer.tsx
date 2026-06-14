@@ -47,7 +47,7 @@ export function Footer() {
       
       <div className="container mx-auto max-w-5xl px-6 mt-12 pt-8 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-xs">
-          © {new Date().getFullYear()} Janick Braun UG (haftungsbeschränkt). All rights reserved.
+          © {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
         </p>
         <div className="flex gap-6">
           {personalInfo.socials.map((social) => {

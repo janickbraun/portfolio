@@ -16,17 +16,20 @@ export default function ImprintPage() {
           
           <div className="space-y-12 text-zinc-400 leading-relaxed">
             <section>
-              <h2 className="text-xl font-bold text-zinc-200 mb-4">Legal Information</h2>
-              <div className="space-y-2">
+              <h2 className="text-xl font-bold text-zinc-200 mb-4">Provider Identification</h2>
+              <p className="text-sm text-zinc-500 mb-4">Information pursuant to § 5 of the German Telemedia Act (TMG)</p>
+              
+              <h3 className="text-md font-semibold text-zinc-300 mt-6 mb-2">Service Provider</h3>
+              <div className="space-y-1">
                 <p className="text-zinc-50 font-medium">{personalInfo.name}</p>
-                <p>Janick Braun UG (haftungsbeschränkt)</p>
                 <p>Ruhe am Bach 5d</p>
-                <p>82377 Penzberg, Germany</p>
+                <p>82377 Penzberg</p>
+                <p>Germany</p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-zinc-200 mb-4">Contact Details</h2>
+              <h2 className="text-xl font-bold text-zinc-200 mb-4">Contact</h2>
               <div className="space-y-2">
                 <p>Phone: {personalInfo.phone}</p>
                 <p>Email: {personalInfo.email}</p>
@@ -34,33 +37,17 @@ export default function ImprintPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-zinc-200 mb-4">Representative</h2>
-              <div className="space-y-2">
-                <p>Represented by: Janick Braun</p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-zinc-200 mb-4">Register Entry</h2>
-              <div className="space-y-2">
-                <p>Entry in the Handeslregister</p>
-                <p>Register Court: Municipal Court Munich</p>
-                <p>Registration Number: HRB 123456 (Placeholder)</p>
-              </div>
-            </section>
-
-            <section>
-              <h2 className="text-xl font-bold text-zinc-200 mb-4">VAT Identification Number</h2>
-              <div className="space-y-2">
-                <p>VAT identification number according to § 27a of the Value Added Tax Act: DE 123456789 (Placeholder)</p>
-              </div>
-            </section>
-
-            <section className="pt-8 border-t border-zinc-900 text-sm">
+              <h2 className="text-xl font-bold text-zinc-200 mb-4">Consumer Dispute Resolution</h2>
               <p>
-                The European Commission provides a platform for online dispute resolution (OS), which you can find here: 
-                <a href="https://ec.europa.eu/consumers/odr" className="text-primary hover:underline ml-1" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>.
-                We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.
+                We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.
+              </p>
+            </section>
+
+            <section className="pt-8 border-t border-zinc-900">
+              <h2 className="text-xl font-bold text-zinc-200 mb-4">Disclaimer</h2>
+              <h3 className="text-md font-semibold text-zinc-300 mb-2">Liability for Content and Links</h3>
+              <p>
+                As a service provider, we are responsible for our own content on these pages in accordance with general laws pursuant to § 7 Paragraph 1 of the German Telemedia Act (TMG). According to §§ 8 to 10 TMG, however, we are not obligated to monitor transmitted or stored external information. If we become aware of any legal violations, we will remove this content or links immediately.
               </p>
             </section>
           </div>
