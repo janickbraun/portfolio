@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { personalInfo } from "@/lib/data";
-import { FadeIn } from "@/components/animations/FadeIn";
 import { ArrowRight, FileText } from "lucide-react";
 
 export function Hero() {
@@ -16,36 +15,34 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
           {/* Text Content */}
           <div className="flex flex-col items-start text-left flex-1 order-2 md:order-1">
-            <FadeIn delay={0.1} immediate>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-50 leading-[1.1] mb-6 xl:-ml-1">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Janick</span>.
-              </h1>
-              <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl leading-relaxed">
-                Fullstack Developer & Founder based in Munich. I build digital products and focus on clean, high-performance web and app experiences.
-              </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-zinc-50 leading-[1.1] mb-6 xl:-ml-1">
+              Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-300">Janick</span>.
+            </h1>
+            <p className="text-lg md:text-xl text-zinc-400 mb-8 max-w-xl leading-relaxed">
+              Fullstack Developer & Founder based in Munich. I build digital products and focus on clean, high-performance web and app experiences.
+            </p>
+            
+            <div className="flex flex-row items-center justify-start gap-3 w-full">
+              <Link
+                href="/projects"
+                className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-5 sm:px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
+              >
+                See my work
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
               
-              <div className="flex flex-row items-center justify-start gap-3 w-full">
-                <Link
-                  href="/projects"
-                  className="group inline-flex h-12 items-center justify-center gap-2 rounded-full bg-primary px-5 sm:px-8 text-sm font-bold text-zinc-950 transition-all hover:bg-primary-hover hover:scale-[1.02]"
-                >
-                  See my work
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-                
-                <Link
-                  href="/cv"
-                  className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-900 border border-zinc-800 px-5 sm:px-8 text-sm font-bold text-zinc-300 transition-all hover:bg-zinc-800 hover:text-zinc-50 hover:scale-[1.02]"
-                >
-                  <FileText className="h-4 w-4" />
-                  My Resume
-                </Link>
-              </div>
-            </FadeIn>
+              <Link
+                href="/cv"
+                className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-zinc-900 border border-zinc-800 px-5 sm:px-8 text-sm font-bold text-zinc-300 transition-all hover:bg-zinc-800 hover:text-zinc-50 hover:scale-[1.02]"
+              >
+                <FileText className="h-4 w-4" />
+                My Resume
+              </Link>
+            </div>
           </div>
           
           {/* Profile Image */}
-          <FadeIn delay={0.2} direction="up" immediate className="relative flex-shrink-0 order-1 md:order-2">
+          <div className="relative flex-shrink-0 order-1 md:order-2">
             <div className="relative h-[240px] w-[240px] sm:h-[280px] sm:w-[280px] md:h-[320px] md:w-[320px] lg:h-[350px] lg:w-[350px]">
               {/* Image Frame */}
               <div className="absolute inset-4 rounded-3xl border border-zinc-800 bg-zinc-900/50 backdrop-blur-sm -z-10 transition-transform" />
@@ -61,7 +58,7 @@ export function Hero() {
                 />
               </div>
             </div>
-          </FadeIn>
+          </div>
         </div>
       </div>
     </section>
